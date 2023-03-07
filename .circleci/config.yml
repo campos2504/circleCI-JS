@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm run build
+      - run: npm run start
   test:
     working_directory: ~/circleci-js
     docker:
