@@ -1,0 +1,19 @@
+Copy code
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "A basic Node.js project",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "Pedro Miranda",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
