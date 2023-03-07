@@ -1,0 +1,27 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/circleci-js
+    docker:
+      - image: "circleci/node:14.15"
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+  test:
+    working_directory: ~/circleci-js
+    docker:
+      - image: "circleci/node:14.15"
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run test
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
